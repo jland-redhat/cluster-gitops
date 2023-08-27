@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespaces-app
+spec:
+    helm:
+      parameters:
+        - values: |
+            clusterName: example-cluster-1
+            namespaces:
+              - example-namespace-1

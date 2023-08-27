@@ -1,0 +1,23 @@
+{{ range .Values.namespaces -}}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+  name: base-namespace
+spec:
+  destination:
+    namespace: {{ . }}
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    helm:
+      valueFiles:
+        - cluster/{{ $.Values.clusterName | required "Cluster name must be provided" }}/namespaces/{{ . }}-values.yaml
+    path: manifest/charts/namespace-base
+    repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
+{{- end }}
