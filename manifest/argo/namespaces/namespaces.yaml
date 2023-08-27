@@ -9,7 +9,6 @@ spec:
   project: default
   source:
     helm:
-      values: {}
     path: manifest/charts/namespace-base
     repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
     targetRevision: HEAD
