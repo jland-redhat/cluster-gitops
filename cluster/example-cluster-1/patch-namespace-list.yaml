@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: namespaces-app
 spec:
+  source:
     helm:
       parameters:
         - values: |
