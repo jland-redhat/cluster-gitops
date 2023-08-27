@@ -1,9 +1,9 @@
 apiVersion: user.openshift.io/v1
 kind: Group
 metadata:
+  name: admin-group
   annotations:
     argocd.argoproj.io/sync-wave: "5"
-  name: admin-group
 users:
   - user1
   - user2
