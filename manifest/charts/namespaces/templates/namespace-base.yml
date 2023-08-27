@@ -14,7 +14,7 @@ spec:
   source:
     helm:
       valueFiles:
-        - cluster/{{ $.Values.clusterName | required "Cluster name must be provided" }}/namespaces/{{ . }}-values.yaml
+        - cluster/{{ $.Values.clusterName | required "Cluster name must be provided" }}/namespaces/{{ . }}.yaml
     path: manifest/charts/namespace-base
     repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
     targetRevision: HEAD
