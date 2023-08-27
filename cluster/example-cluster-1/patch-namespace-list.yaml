@@ -5,8 +5,7 @@ metadata:
 spec:
   source:
     helm:
-      parameters:
-        - values: |
-            clusterName: example-cluster-1
-            namespaces:
-              - example-namespace-1
+      values: |
+          clusterName: example-cluster-1
+          namespaces:
+            - example-namespace-1
