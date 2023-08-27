@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     helm:
-    path: manifest/charts/namespace-base
+    path: manifest/charts/namespaces
     repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
     targetRevision: HEAD
   syncPolicy:
