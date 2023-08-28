@@ -8,4 +8,4 @@ spec:
       values: |
           clusterName: example-cluster-1
           namespaces:
-            - example-namespace-1
+            - example-namespace-2
