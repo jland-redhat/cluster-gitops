@@ -6,6 +6,7 @@ spec:
   source:
     helm:
       values: |
-          clusterName: example-cluster-1
+          clusterName: example-cluster-2
           namespaces:
+            - example-namespace-1
             - example-namespace-2
