@@ -1,4 +1,4 @@
-# List of Namespace to be created
-namespaces: []
-
-# cluster: CLUSTER_NAME
+clusterName: example-cluster-2
+namespaces:
+  - example-namespace-1
+  - example-namespace-2
