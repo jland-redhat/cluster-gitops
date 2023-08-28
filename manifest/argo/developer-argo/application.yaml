@@ -4,7 +4,7 @@ metadata:
   name: developer-gitops
 spec:
   destination:
-    namespace: openshift-operators
+    namespace: developer-gitops
     server: 'https://kubernetes.default.svc'
   project: default
   source:
