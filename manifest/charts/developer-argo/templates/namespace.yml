@@ -3,7 +3,5 @@ kind: Namespace
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
-  labels:
-    owner: {{ .Values.owner }}
-  name: {{ .Values.name }}
+  name: developer-gitops
 spec: {}

@@ -4,3 +4,4 @@ kind: Kustomization
 bases:
   - ../../manifest/argo/namespaces
   - ../../manifest/argo/container-security
+  - ../../manifest/argo/developer-argo
