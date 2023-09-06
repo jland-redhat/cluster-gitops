@@ -4,12 +4,12 @@ metadata:
   name: container-security
 spec:
   destination:
-    namespace: openshift-operators
+    namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   project: default
   source:
     helm:
-    path: manifest/charts/container-security
+    path: manifest/charts/infra-argo
     repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
     targetRevision: HEAD
   syncPolicy:

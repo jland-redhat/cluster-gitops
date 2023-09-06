@@ -6,3 +6,7 @@ bases:
   - ../../manifest/argo/container-security
   - ../../manifest/argo/developer-argo
   - ../../manifest/argo/infra-argo
+
+
+patchesStrategicMerge:
+  - patch-app-version.yaml
