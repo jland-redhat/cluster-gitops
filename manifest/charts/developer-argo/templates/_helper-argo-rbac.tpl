@@ -1,7 +1,7 @@
 {{- define "argo.rbac.policy" }}
     policy: |
       p, role:my-project-admin, projects, *, my-project, allow
-      p, role:my-project-admin, projects, *, repositories, allow
+      p, role:my-project-admin, repositories, *, *, allow
       p, role:my-project-admin, applications, *, my-project/*, allow
       p, role:my-project-admin, applicationsets, *, my-project/*, allow
       g, system:cluster-admins, role:admin
