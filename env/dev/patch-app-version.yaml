@@ -1,5 +1,3 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-spec:
-  source:
-    targetRevision: rbac-example
+- op: replace
+  path: /spec/source/targetRevision
+  value: rbac-example

@@ -8,5 +8,9 @@ bases:
   - ../../manifest/argo/infra-argo
 
 
-patchesStrategicMerge:
-  - patch-app-version.yaml
+patches:
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+    path: patch-app-version.yaml
+  
