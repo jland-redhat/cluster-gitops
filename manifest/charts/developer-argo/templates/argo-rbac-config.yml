@@ -1,0 +1,17 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: argocd-rbac-cm
+data:
+  policy.csv: |
+    p, role:my-project-admin, projects, *, my-project
+    p, role:my-project-admin, applications, *, my-project/*, allow
+    p, role:my-project-admin, applicationsets, *, my-project/*, allow
+    g, system:cluster-admins, role:admin
+    g, cluster-admins, role:admin
+    g, argo-admins, role:admin
+    g, my-project-admins, role:my-project-admin
+  policy.default: 'role:readonly'
+  scopes: '[groups]'
+# Reference Documentation:
+# https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/#rbac-resources-and-actions
