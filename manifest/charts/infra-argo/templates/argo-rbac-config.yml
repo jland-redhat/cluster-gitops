@@ -1,7 +1,11 @@
+kind: ConfigMap
 apiVersion: v1
-kind: Namespace
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
-  name: developer-gitops
-spec: {}
+  name: argocd-rbac-cm
+data:
+  policy.csv: |
+    g, system:cluster-admins, role:admin
+    g, cluster-admins, role:admin
+    g, argo-admins, role:admin
+  policy.default: 'role:readonly'
+  scopes: '[groups]'
