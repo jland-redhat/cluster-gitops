@@ -1,0 +1,9 @@
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: namespace-view
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+users:
+  - user1
+  - user2

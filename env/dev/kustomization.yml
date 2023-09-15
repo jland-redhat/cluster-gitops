@@ -5,3 +5,11 @@ bases:
   - ../../manifest/argo/namespaces
   - ../../manifest/argo/container-security
   - ../../manifest/argo/developer-argo
+
+
+patches:
+  - target:
+      group: argoproj.io
+      version: v1alpha1
+    path: patch-app-version.yaml
+  

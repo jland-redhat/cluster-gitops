@@ -2,3 +2,5 @@ clusterName: example-cluster-2
 namespaces:
   - example-namespace-1
   - example-namespace-2
+
+targetRevision: HEAD

@@ -54,11 +54,11 @@ spec:
         cpu: 250m
         memory: 512Mi
   rbac:
-    policy: |
-      g, system:cluster-admins, role:admin
-      g, cluster-admins, role:admin
+    {{- template "argo.rbac.policy" . }}
     scopes: '[groups]'
-    defaultPolicy: 'role:admin' # default policy should be more restrictive in non-demo clusters
+    defaultPolicy: 'role:readonly' # default policy should be more restrictive in non-demo clusters
+    # Reference Documentation:
+    # https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/#rbac-resources-and-actions
   repo:
     resources:
       limits:
