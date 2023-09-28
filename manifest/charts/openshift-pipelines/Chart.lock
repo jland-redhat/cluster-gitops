@@ -1,0 +1,9 @@
+dependencies:
+- name: helper-operator
+  repository: file://../utility/helper-operator
+  version: 1.0.17
+- name: helper-status-checker
+  repository: file://../utility/helper-status-checker
+  version: 3.0.6
+digest: sha256:5f413226e0e6121fe39aede146dcbb04706975da45529c703f3053b8a2e005e5
+generated: "2023-09-28T16:41:33.704540728-04:00"

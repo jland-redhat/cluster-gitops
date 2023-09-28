@@ -22,3 +22,12 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "1.16.0"
+
+dependencies:
+  - name: helper-operator
+    version: "~1.0.17"
+    repository: "file://../utility/helper-operator"
+  - name: helper-status-checker
+    version: "3.0.6"
+    repository: "file://../utility/helper-status-checker"
+    condition: helper-status-checker.enabled
