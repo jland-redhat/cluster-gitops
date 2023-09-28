@@ -11,8 +11,6 @@ helper-operator:
         operatorName: openshift-pipelines-operator-rh
         source: redhat-operators
         sourceNamespace: openshift-marketplace
-      operatorgroup:
-        create: true
 
 helper-status-checker:
   enabled: true
