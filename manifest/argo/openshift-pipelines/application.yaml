@@ -11,6 +11,6 @@ spec:
     helm:
     path: manifest/charts/openshift-pipelines
     repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
-    targetRevision: advance-operator
+    targetRevision: HEAD
   syncPolicy:
     automated: {}
