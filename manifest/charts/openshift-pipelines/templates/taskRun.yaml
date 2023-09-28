@@ -1,24 +1,24 @@
-apiVersion: tekton.dev/v1beta1
-kind: Task
-metadata:
-  name: hello-world-task
-  annotations:
-    argocd.argoproj.io/sync-wave: 1
-spec:
-  steps:
-    - name: print-line
-      image: ubi8/ubi
-      command: ["echo"]
-      args: ["Hello World."]
+# apiVersion: tekton.dev/v1beta1
+# kind: Task
+# metadata:
+#   name: hello-world-task
+#   annotations:
+#     argocd.argoproj.io/sync-wave: 1
+# spec:
+#   steps:
+#     - name: print-line
+#       image: ubi8/ubi
+#       command: ["echo"]
+#       args: ["Hello World."]
 
----
+# ---
 
-apiVersion: tekton.dev/v1beta1
-kind: TaskRun
-metadata:
-  generateName: hello-world-taskrun-
-  annotations:
-    argocd.argoproj.io/sync-wave: 1
-spec:
-  taskRef:
-    name: hello-world-task
+# apiVersion: tekton.dev/v1beta1
+# kind: TaskRun
+# metadata:
+#   generateName: hello-world-taskrun-
+#   annotations:
+#     argocd.argoproj.io/sync-wave: 1
+# spec:
+#   taskRef:
+#     name: hello-world-task
