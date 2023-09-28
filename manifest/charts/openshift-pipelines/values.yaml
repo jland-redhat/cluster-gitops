@@ -2,7 +2,7 @@ helper-operator:
   operators:
     openshift-pipelines: # Operator Group
       enabled: true
-      syncwave: '-1'
+      syncwave: '-2'
       namespace:
         name: openshift-operators
       subscription:
@@ -16,6 +16,7 @@ helper-operator:
 
 helper-status-checker:
   enabled: true
+  syncwave: '-1'
 
   operatorName: openshift-pipelines-operator-rh
 
