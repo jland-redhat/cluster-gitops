@@ -1,0 +1,29 @@
+helper-operator:
+  operators:
+    openshift-pipelines: # Operator Group
+      enabled: true
+      syncwave: '-1'
+      namespace:
+        name: openshift-operators
+      subscription:
+        channel: latest
+        approval: Automatic
+        operatorName: openshift-pipelines-operator-rh
+        source: redhat-operators
+        sourceNamespace: openshift-marketplace
+      operatorgroup:
+        create: true
+
+helper-status-checker:
+  enabled: true
+
+  operatorName: openshift-pipelines-operator-rh
+
+  wait_time: 60  # wait time in seconds for the check-job to verify when the deployments should be ready
+
+  namespace:
+    name: openshift-operators
+
+  serviceAccount:
+    create: true
+    name: "status-checker"

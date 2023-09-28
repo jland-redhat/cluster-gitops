@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-pipelines
+spec:
+  destination:
+    namespace: openshift-operators
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    helm:
+    path: manifest/charts/openshift-pipelines
+    repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
+    targetRevision: advance-operator
+  syncPolicy:
+    automated: {}
