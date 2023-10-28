@@ -27,16 +27,11 @@ This repo makes use of the following:
   └── charts (3b)
 ```
 
-  <sub>
-
   1. Within each `cluster` folder, you'll find a Kustomize Template that represents a distinct cluster. These templates inherit from an `env` template.
-
   2. Inside every `env` folder, you'll discover a Kustomize Template designed for shared resources within the environment.
-
-  3. The Manifest folder contains templates for deploying various architectural features.<br/>
-    3a. Contains a set of Kustomize Templates for deploying the Argo `Application` pointing to the appropriate Helm chart<br/>
-    3b. Contains a set of Helm Charts that represent the different components installed onto the cluster
-  </sub>
+  3. The Manifest folder contains templates for deploying various architectural features.
+       - Contains a set of Kustomize Templates for deploying the Argo `Application` pointing to the appropriate Helm chart
+       - Contains a set of Helm Charts that represent the different components installed onto the cluster
 
 ## Cluster Management
 
