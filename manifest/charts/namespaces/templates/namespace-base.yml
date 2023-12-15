@@ -16,8 +16,8 @@ spec:
       valueFiles:
         - /cluster/{{ $.Values.clusterName | required "Cluster name must be provided" }}/namespaces/{{ . }}.yaml
     path: manifest/charts/namespace-base
-    repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
-    targetRevision: {{ $.Values.revision }}
+    repoURL: '{{ $.Values.git.url }}'
+    targetRevision: {{ $.Values.git.revision }}
   syncPolicy:
     automated: {}
 {{- end }}

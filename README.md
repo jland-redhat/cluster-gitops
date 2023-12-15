@@ -86,6 +86,8 @@ spec:
       selfHeal: false
 ```
 
+> **Note:** if you have forked this repository make sure to change the urls in `env/dev/patch-git-url.yaml`
+
 ### Adding a Namespace to a Cluster
 
 Namespaces creation/deletion can be managed through this repository using ArgoCD. To add a new namespace do the following:

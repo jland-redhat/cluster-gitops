@@ -10,6 +10,11 @@ bases:
 patches:
   - target:
       group: argoproj.io
-      version: v1alpha1
+      kind: Application
     path: patch-app-version.yaml
+  - target:
+      group: argoproj.io
+      kind: Application
+      name: namespaces-app
+    path: patch-git-url.yaml
   

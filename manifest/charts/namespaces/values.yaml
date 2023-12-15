@@ -3,4 +3,6 @@ namespaces:
   - example-namespace-1
   - example-namespace-2
 
-targetRevision: HEAD
+git:
+  url: https://github.com/jland-redhat/cluster-gitops.git
+  revision: HEAD

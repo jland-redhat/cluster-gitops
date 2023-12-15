@@ -10,8 +10,10 @@ spec:
   source:
     helm:
       parameters:
-        - name: targetRevision
-          value: HEAD
+        - name: git.url
+          value: <REPLACE_ME>
+        - name: git.revision
+          value: <REPLACE_ME>
     path: manifest/charts/namespaces
     repoURL: 'https://github.com/jland-redhat/cluster-gitops.git'
     targetRevision: HEAD
