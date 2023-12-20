@@ -1,3 +1,6 @@
 - op: replace
   path: /spec/source/targetRevision
   value: HEAD # This can be changed if you want to deploy a specific branch or tag
+- op: replace
+  path: /spec/source/repoURL
+  value: https://github.com/jland-redhat/cluster-gitops.git # Change this on a fork

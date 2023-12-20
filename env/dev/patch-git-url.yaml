@@ -1,12 +1,12 @@
 - op: replace
   path: /spec/source/repoURL
-  value: https://github.com/jland-redhat/cluster-gitops.git # Change this if you forked the repo
+  value: https://TESTcluster-gitops.git # Change this if you forked the repo
 - op: replace
   path: /spec/source/helm/parameters/0/name
   value: git.url
 - op: replace
   path: /spec/source/helm/parameters/0/value
-  value: https://github.com/jland-redhat/cluster-gitops.git # Change this if you forked the repo
+  value: https://TEST/cluster-gitops.git # Change this if you forked the repo
 - op: replace
   path: /spec/source/helm/parameters/1/name
   value: git.revision

@@ -10,7 +10,6 @@ bases:
 patches:
   - target:
       group: argoproj.io
-      kind: Application
     path: patch-app-version.yaml
   - target:
       group: argoproj.io
